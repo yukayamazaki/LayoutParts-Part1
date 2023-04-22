@@ -1,2 +1,16 @@
 @charset "UTF-8";
 /* 回答はここから */
+.flex-container{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.flex-items {
+  width: 200px;
+  padding: 10px 10px;
+  margin: 30px;
+  outline: 10px solid #655;
+  box-shadow: 0 0 0 6px #655;
+  border-radius: 13px;
+  background-color: #d2b48c;
+}
