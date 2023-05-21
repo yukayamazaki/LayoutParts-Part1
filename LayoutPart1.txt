@@ -1,0 +1,19 @@
+Q-1 positionについて
+親要素のcontainerをposition：relativeを使い、親要素基準に子要素の<p>タグをposition:absoluteでtopとleftをそれぞれ50％に設定することで、<P>タグを上下左右50％の位置に配置します。
+この時点では<p>タグの要素の右上の部分が親要素の中央に配置されているので、transformでtopとleftを-50％に設定します。これにより<p>要素の大きさの-50％分移動するので真ん中に配置されます。
+
+Q-2について
+高さが1番高い要素と合わせるために使用しているcssはflexboxです
+flexboxの特徴として列毎に子要素の高さを自動でそろえる特性があるのでheightを使用しなくても親要素のdisplayをflexにすることで自動で子要素の高さが揃います。
+flex-itemsで使用しているoutlineはmarginに含まれborderの外側にある要素になるので1番目の左、3番目の右、それぞれの下にmarginを設定しない場合outline分親要素から子要素がはみ出てしまう為marginを設定しています。
+
+Q-3
+偶数列の色を灰色に指定するためにtr：nth-child（2n）で偶数列のみ選択しています。
+なのでテーブルの列を10行に増やした際に列のセルが灰色になるのは、2,4,6,8,10列目です。
+tr：nth-child（）の（）内をevenにすることでも同様になります。
+
+Q-4
+横並びにしているcssはdisplay: table;とdisplay: table-cell;です。
+
+Q-5
+grid-template-columns: 1fr 1fr 1fr;を用いて現在は横並びになっている要素の比率を1:1:1に設定しているのでgrid-template-columns: 1fr 2fr 1fr;とすることで真ん中の要素のみ長さを変えることができます。具体的な横幅が決まっている場合はfrをpxに変更することでも表すことができます。
